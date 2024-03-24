@@ -4,30 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>MSSE661 - Final App</title>
   </head>
 
+  
+
   <body>
-      <header>
-        <h1>
-            Header
-        </h1>
-      </header>
+    <main class="shadow">
+        <header>
+            <div class="nav-right hidden-xs menuCtn">
+                <div class="button" id="menuBtn">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
+                <span class="menu-text-overlay"></span>
+                <span class="menu-line-overlay"></span>
+            </div>
 
-      <main>
-        <h2>
-            Hello World!
-        </h2>
-      </main>
+            <h1>
+                Song Request App
+            </h1>
+        </header>
 
-      <footer>
+        
+        
+
+        <div class="page">
+            <h2>
+                Hello World!
+            </h2>
+        </div>
+        
+
+        <footer>
         <h1>
-            Footer
+            Author: 
+            <a href="https://github.com/JohnMKreski/finalApp">
+                John Michael Kreski
+            </a>
         </h1>
-      </footer>
+        </footer>
+    </main>
+
+    <div class="sidebar">
+        <ul class="sidebar-list">
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Link 1</a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Link 2</a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">Link 3</a>
+            </li>
+        </ul> 
+    </div>
+
   </body>
 
-  <script></script>
+  <script src="src/sidebar.js"></script>
 </html>
