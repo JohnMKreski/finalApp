@@ -14,8 +14,8 @@ This app is designed for DJs who interact with their audience by taking live son
     2. Song Request List
         - DJ and users can view a list of song requests in real-time. 
         - Each request displays details like artist, song title, and submission status (not played, played).
-        - Requests are ordered based on the time of submission with a unique ID, providing a clear queue for the DJ to follow.
-
+        - Requests are ordered based on the time of submission with a unique ID, providing a clear queue for the DJ to follow. 
+ 
     3. Optional User Accounts
         - Users have the option to create accounts. 
         - Account features include storing user information (name, email) and keeping track of past song requests. 

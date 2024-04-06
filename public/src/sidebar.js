@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         console.log("SideBar Toggled With Escape Key")
     });
-  
+   
   });
   
