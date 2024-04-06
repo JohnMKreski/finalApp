@@ -20,6 +20,23 @@ main {
     transition: transform .7s ease-in-out;
 }
 
+.tablePage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 85%;
+    width: 100%;
+}
+
+.formPage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+}
+
 
 /*      Main Move/ Main Shadow */
 
