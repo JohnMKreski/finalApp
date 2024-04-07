@@ -6,9 +6,7 @@
 
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="stylesheet" href="./src/css/table.css" />
     <link rel="stylesheet" href="./src/css/form.css" />
-
 
     <script src="https://kit.fontawesome.com/ba57204060.js" crossorigin="anonymous"></script>
 
@@ -30,12 +28,9 @@
                 </div>
 
                 <div class="h1Ctn">
-                    <button onclick="doRefresh(event)" 
-                    type="button" 
-                    class="refreshBtn"
-                    title="Click to Refresh!"> 
-                        Song Queue 
-                    </button>
+                    <h1>
+                        Song Request App
+                    </h1> 
                 </div>
 
                 <div class="nav-right">
@@ -51,30 +46,32 @@
         </header>
 
 
-        <div class="tablePage">
-            <div class="tableCtn">
-                <table class="songTable">
-                    <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>Artist Name</th>
-                          <th>Song Title</th>
-                          <th>Created Date</th>
-                          <th>Requested Time</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                      <tbody> 
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                      </tbody>
-                </table>
+        <div class="formPage">
+            <div class="formCtn">
+                <form class="formStr" novalidate>
+                        <label for="username">
+                            <span>
+                                Username:
+                            </span>    
+                        <input id="username" type="text" placeholder="Enter Username" autocomplete="off" />
+                        </label>
+
+                        <label for="password">
+                            <span>
+                                Password:
+                            </span>
+                        <input id="password" type="password" placeholder="Enter Password" autocomplete="off" />
+                        </label> 
+                        
+                    <div class = "btnCtn">
+                        <button onclick="doLogin(event)">Login</button>
+                        <button 
+                            onclick="window.location.href='./register.html'" 
+                            type="button">
+                                Register
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
         
@@ -101,7 +98,7 @@
                 <a href="#" class="sidebar-link">About</a>
             </li>
             <li class="sidebar-item">
-                <a href="./login.html" class="sidebar-link">Login</a>
+                <a href="#" class="sidebar-link">Login</a>
             </li>
         </ul> 
     </div>

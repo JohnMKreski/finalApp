@@ -1,6 +1,7 @@
 .tableCtn {
     display: block;
     padding: 25px;
+    width: -webkit-fill-available;
 }
 
 .songTable {
@@ -26,6 +27,7 @@ th {
 
 td {
     border: 1px solid;
+    font-size: large;
 }
 
 tr:nth-child(even) {background-color: #ffffff1a;}

@@ -35,12 +35,22 @@ This app is designed for DJs who interact with their audience by taking live son
 
 ### Index
 
-![index.html](./public/media/img/Index.png)
+![index](./public/media/img/Index.png)
 
 ### Sidebar Menu 
 
-![Sidebar Menu](./public/media/img/Sidebar.png)
+![sidebar](./public/media/img/Sidebar.png)
 
 ### Request Form
 
-![requestsong.htm](./public/media/img/songRequest.png)
+![requestsong](./public/media/img/songRequest.png)
+
+### Login Form
+
+![login](./public/media/img/login.png)
+
+### Register Form
+
+![register](./public/media/img/register.png)
+
+

@@ -29,6 +29,17 @@ input[type="text"] {
     color: white;
 }
 
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #1A1A1A;
+    color: white;
+}
+
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
@@ -40,4 +51,17 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+.refreshBtn {
+    cursor: pointer;
+    background-color: #00000000;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.refreshBtn:hover  {
+    background-color: rgba(255, 255, 255, 0.596);
+    color: #1d518d;
 }

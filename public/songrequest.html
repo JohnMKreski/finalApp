@@ -48,18 +48,18 @@
 
         <div class="formPage">
             <div class="formCtn">
-                <form>
+                <form novalidate>
                     <h2>Request a Song</h2>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name.." required>
+                    <!--<label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required>-->
 
                     <label for="song_title">Song Title</label>
                     <input type="text" id="song_title" name="song_title" placeholder="The song.." required>
 
-                    <label for="artist">Artist</label>
-                    <input type="text" id="artist" name="artist" placeholder="The artist.." required>
+                    <label for="artist_name">Artist</label>
+                    <input type="text" id="artist_name" name="artist" placeholder="The artist.." required>
 
-                    <input type="submit" value="Submit">
+                    <button onclick="doRequest(event)">Submit</button>
                 </form>
             </div>
         </div>
@@ -87,12 +87,15 @@
                 <a href="#" class="sidebar-link">About</a>
             </li>
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link">Login</a>
+                <a href="./login.html" class="sidebar-link">Login</a>
             </li>
         </ul> 
     </div>
 
   </body>
 
+  <script src="./src/js/service-helpers.js"></script>
+  <script src="./src/js/auth.service.js"></script>
+  <script src="./src/js/app.js"></script>
   <script src="./src/js/sidebar.js"></script>
 </html>
