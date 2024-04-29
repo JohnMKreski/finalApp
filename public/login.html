@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/bootstrap.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="stylesheet" href="./src/css/form.css" />
 
     <script src="https://kit.fontawesome.com/ba57204060.js" crossorigin="anonymous"></script>
 
-    <title>MSSE661 - Final App</title>
+    <link rel="icon" type="image/x-icon" href="./src/media/img/Web/icons8-dj-material-filled-32.png">
+
+    <title>Login</title>
   </head>
 
   
 
   <body>
-    <main class="shadow"> 
+    <main class="shadow records"> 
         <header>
             <div class="menuCtn">
                 <div class="logoCtn">
@@ -27,11 +30,7 @@
                     </a>
                 </div>
 
-                <div class="h1Ctn">
-                    <h1>
-                        Song Request App
-                    </h1> 
-                </div>
+               
 
                 <div class="nav-right">
                     <div class="button" id="menuBtn">
@@ -46,38 +45,86 @@
         </header>
 
 
-        <div class="formPage">
-            <div class="formCtn">
-                <form class="formStr" novalidate>
-                        <label for="username">
-                            <span>
-                                Username:
-                            </span>    
-                        <input id="username" type="text" placeholder="Enter Username" autocomplete="off" />
-                        </label>
-
-                        <label for="password">
-                            <span>
-                                Password:
-                            </span>
-                        <input id="password" type="password" placeholder="Enter Password" autocomplete="off" />
-                        </label> 
-                        
-                    <div class = "btnCtn">
-                        <button onclick="doLogin(event)">Login</button>
-                        <button 
-                            onclick="window.location.href='./register.html'" 
-                            type="button">
-                                Register
-                        </button>
+        <div class="container">
+            <div class="card-container">
+                <div class="card-body">
+                    <div class="card-split">
+                        <div class="right-border">
+                        <h2 class="card-title">Sign In</h2>
+                        <form novalidate>
+                            <div class="form-group">
+                            <label for="formInputUsername">Username</label>
+                            <input
+                                id="formInputUsername"
+                                type="text"
+                                class="form-control"
+                                required
+                            />
+                            </div>
+                            <div class="form-group">
+                            <label for="formInputPassword">Password</label>
+                            <input
+                                id="formInputPassword"
+                                type="password"
+                                class="form-control"
+                                required
+                            />
+                            </div>
+                            <div class="form-group form-group-btn">
+                            <button class="btn btn-primary" onclick="doLogin(event)">
+                                Sign In
+                            </button>
+                            </div>
+                        </form>
+                        </div>
+            
+                        <div class="left-border">
+                        <h2 class="card-title">Register</h2>
+                        <form novalidate>
+                            <div class="form-group">
+                            <label for="formInputUsernameReg">Username</label>
+                            <input
+                                id="formInputUsernameReg"
+                                type="text"
+                                class="form-control"
+                                placeholder=""
+                                required
+                            />
+                            </div>
+                            <div class="form-group">
+                            <label for="formInputPasswordReg">Password</label>
+                            <input
+                                id="formInputPasswordReg"
+                                type="password"
+                                class="form-control"
+                                placeholder=""
+                                required
+                            />
+                            </div>
+                            <div class="form-group">
+                            <label for="formInputEmailReg">Email</label>
+                            <input
+                                id="formInputEmailReg"
+                                type="email"
+                                class="form-control"
+                                placeholder="""
+                                required
+                            />
+                            </div>
+                            <div class="form-group form-group-btn">
+                            <button class="btn btn-primary" onclick="doRegister(event)">
+                                Sign Up
+                            </button>
+                            </div>
+                        </form>
+                        </div>
                     </div>
-                </form>
             </div>
         </div>
         
 
         <footer>
-        <h1>
+        <h1 class="lead">
             Author: 
             <a href="https://github.com/JohnMKreski/finalApp">
                 John Michael Kreski
@@ -88,25 +135,40 @@
 
     <div class="sidebar">
         <ul class="sidebar-list">
-            <li class="sidebar-item">
-                <a href="./index.html" class="sidebar-link">Song Queue</a>
+            <li id="homeItem" class="sidebar-item">
+                <a href="./index.html" class="sidebar-link">Home</a>
             </li>
-            <li class="sidebar-item">
+            <li id="globalItem" class="sidebar-item">
+                <a href="./src/lib/song_req/songs.html" class="sidebar-link">SongQuest</a>
+            </li>
+            <!-- <li class="sidebar-item">
                 <a href="./songrequest.html" class="sidebar-link">Request A Song</a>
+            </li> -->
+            <li id="userItem" class="sidebar-item">
+                <a href="./user.html" class="sidebar-link">User Info</a>
             </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">About</a>
+            <li id="loginItem" class="sidebar-item">
+                <a id="loginLink" href="./login.html" class="sidebar-link">Login</a>
             </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">Login</a>
+            <li id="logoutItem" class="sidebar-item">
+                <a id="logoutLink" href="#" class="sidebar-link" onclick="doLogout(event)">Logout</a>
             </li>
         </ul> 
     </div>
 
+    <script src="./src/lib/API/api.config.js"></script>
+    <script src="./src/lib/API/simple-storage.js"></script>
+    <script src="./src/lib/API/service-helpers.js"></script>
+    <script src="./src/lib/API/auth.service.js"></script>
+    <script src="./src/lib/API/auth.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./src/lib/UI/bootstrap.js"></script>
+
+    <script src="./src/lib/UI/sidebar.js"></script>
+    <script src="./src/lib/UI/menu.js"></script>
+
+
   </body>
 
-  <script src="./src/js/service-helpers.js"></script>
-  <script src="./src/js/auth.service.js"></script>
-  <script src="./src/js/app.js"></script>
-  <script src="./src/js/sidebar.js"></script>
 </html>

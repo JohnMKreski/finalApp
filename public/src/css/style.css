@@ -18,6 +18,7 @@ main {
     height: 100%;
     background-color: #1A1A1A;
     transition: transform .7s ease-in-out;
+    overflow-y: scroll;
 }
 
 .tablePage {
@@ -72,7 +73,7 @@ header {
     display: grid;
     align-content: center;
     height: 10%;
-    background-color: #1d518d;
+    background-color: #363f49;
 }
 
 .logoCtn {
@@ -162,15 +163,17 @@ header {
 
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     display: grid;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    height: 5%;
-    background-color: #1d518d;
+    /* height: 1.5%; */
+    background-color: #363f49;
+    font-size: small;
+    padding-left: 10px;
 }
 
 footer a {
@@ -258,11 +261,11 @@ footer a:visited {
   }
   
   .sidebar-item:first-child {
-    -webkit-transition: all .7s 2s ease-in-out;
-    -moz-transition: all .7s .2s ease-in-out;
-    -ms-transition: all .7s .2s ease-in-out;
-    -o-transition: all .7s .2s ease-in-out;
-    transition: all .5s .2s ease-in-out;
+    -webkit-transition: all .7s 3s ease-in-out;
+    -moz-transition: all .7s .3s ease-in-out;
+    -ms-transition: all .7s .3s ease-in-out;
+    -o-transition: all .7s .3s ease-in-out;
+    transition: all .5s .3s ease-in-out;
   }
   
   .sidebar-item:nth-child(2) {
@@ -274,20 +277,36 @@ footer a:visited {
   }
 
   .sidebar-item:nth-child(3) {
-    -webkit-transition: all .7s .4s ease-in-out;
-    -moz-transition: all .7s .4s ease-in-out;
-    -ms-transition: all .7s .4s ease-in-out;
-    -o-transition: all .7s .4s ease-in-out;
+    -webkit-transition: all .7s .5s ease-in-out;
+    -moz-transition: all .7s .5s ease-in-out;
+    -ms-transition: all .7s .5s ease-in-out;
+    -o-transition: all .7s .5s ease-in-out;
+    transition: all .5s .5s ease-in-out;
+  }
+
+  .sidebar-item:nth-child(4) {
+    -webkit-transition: all .7s .6s ease-in-out;
+    -moz-transition: all .7s .6s ease-in-out;
+    -ms-transition: all .7s .6s ease-in-out;
+    -o-transition: all .7s .6s ease-in-out;
     transition: all .5s .6s ease-in-out;
   }
-  
+
+  .sidebar-item:nth-child(5) {
+    -webkit-transition: all .7s .7s ease-in-out;
+    -moz-transition: all .7s .7s ease-in-out;
+    -ms-transition: all .7s .7s ease-in-out;
+    -o-transition: all .7s .7s ease-in-out;
+    transition: all .5s .7s ease-in-out;
+  }
+/*   
   .sidebar-item:last-child {
     -webkit-transition: all .7s .8s ease-in-out;
     -moz-transition: all .7s .8s ease-in-out;
     -ms-transition: all .7s .8s ease-in-out;
     -o-transition: all .7s .8s ease-in-out;
     transition: all .5s .8s ease-in-out;
-  }
+  } */
   
   .sidebar-item.active {
     opacity: 1;
@@ -328,3 +347,21 @@ footer a:visited {
 
 
   /*                ---             */
+
+  /* WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255 255 255 / 50%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255 255 255 / 70%);
+}

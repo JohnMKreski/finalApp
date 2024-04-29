@@ -13,8 +13,8 @@
     <script src="https://kit.fontawesome.com/ba57204060.js" crossorigin="anonymous"></script>
 
     <link rel="icon" type="image/x-icon" href="./src/media/img/Web/icons8-dj-material-filled-32.png">
-    
-    <title>Index</title>
+
+    <title>SongQuest - User</title>
   </head>
 
   
@@ -54,23 +54,72 @@
 
 
         <div class="container">
-            <h1 class="mt-5">SongQuest</h1>
-            <p class="lead"> Welcome </p>
-            <p>
-                SongQuest is a mobile application designed to enhance the 
-                experience of live events, such as concerts, parties, and weddings. 
-                The app allows attendees to request songs they want to hear during 
-                the event directly from their smartphones. Users can browse through 
-                a vast catalog of songs, search for specific tracks or artists, and 
-                submit their requests with just a few taps. Event organizers can 
-                manage the song requests in real-time, curate playlists, and ensure 
-                a lively atmosphere that resonates with the audience's preferences. 
-                SongQuest brings interactivity and engagement to any gathering, 
-                making it a must-have tool for both event organizers and attendees.            </p>
-            </p>
+            <h1 class="display-4">User Info</h1>
             <p class="lead">
-                <a target="_blank" href="https://icons8.com/icon/5731/dj">DJ</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                This should show <em>User ID</em>, <em>Username</em>, <em>Email</em>, and <em>Role Type</em> if you are logged in. 
             </p>
+            <br>
+            <p class="lead">
+                <em>TODO:</em> Make an "Update User" Button.
+            </p>
+            <div class="page">
+                <table class="table">
+                    <thead>
+                        <th>
+                            User ID
+                        </th>
+                        <th>
+                            Username
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Role Type
+                        </th>
+                    </thead>
+                    <tbody id="user">
+                        <tr id="loading-user">
+                            <td>Loading...</td>
+                        </tr>
+                    </tbody>
+                  
+                </table>
+            </div>
+            <br>
+                <p class="lead">
+                    This should show <em>YOUR</em> requested songs.
+                </p>
+                <div class="page">
+                    <table class="table">
+                        <thead>
+                            <th>
+                                User ID
+                            </th>
+                            <th>
+                                Song ID
+                            </th>
+                            <th>
+                                Artist
+                            </th>
+                            <th>
+                                Song Title
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                        </thead>
+                        <tbody id="user-songs">
+                            <tr id="loading-row">
+                                <td colspan="6">Loading...</td>
+                            </tr>
+                        </tbody>  
+                    </table>
+                </div>
+                
         </div>
         
 
@@ -112,12 +161,23 @@
     <script src="./src/lib/API/service-helpers.js"></script>
     <script src="./src/lib/API/auth.service.js"></script>
     <script src="./src/lib/API/auth.js"></script>
+    <script src="./src/lib/API/auth.guard.js"></script>
 
-    <script src="./src/lib/UI/menu.js"></script>
-    <script src="./src/lib/UI/sidebar.js"></script>
+    <script src="./src/lib/song_req/song_req-api.service.js"></script>
+    <script src="./src/lib/song_req/user_req/user_req.service.js"></script>
+
+    <script src="./src/lib/user/user.service.js"></script>
+    <script src="./src/lib/user/build-user-info.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./src/lib/UI/bootstrap.js"></script>
+    <script src="./src/lib/UI/menu.js"></script>
+    <script src="./src/lib/UI/sidebar.js"></script>
+
+
+
+
+    <script src="./app.js"></script>
 
   </body>
 

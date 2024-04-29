@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+
+
+    <script src="https://kit.fontawesome.com/ba57204060.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="../../media/img/Web/icons8-dj-material-filled-32.png">
+
+    <title>SongQuest</title>
+  </head>
+
+  
+
+  <body>
+    <main class="shadow records"> 
+        <header>
+            <div class="menuCtn">
+                <div class="logoCtn">
+                    <a href="#">
+                        <i class="fa-kit fa-peakservices peak-logo fa-3x"></i>
+                        <span class="text-overlay"></span>
+                        <span class="line-overlay"></span>
+                    </a>
+                </div>
+
+                <div class="h1Ctn">
+                    <!-- <button onclick="doRefresh(event)" 
+                    type="button" 
+                    class="refreshBtn"
+                    title="Click to Refresh!"> 
+                        Song Queue 
+                    </button> -->
+                </div>
+
+                <div class="nav-right">
+                    <div class="button" id="menuBtn">
+                        <div class="bar top"></div>
+                        <div class="bar middle"></div>
+                        <div class="bar bottom"></div>
+                    </div>
+                    <span class="menu-text-overlay"></span>
+                    <span class="menu-line-overlay"></span>                
+                </div>  
+            </div>
+        </header>
+
+
+        <div class="Ctnr">
+            <h1 class="display-4">SongQuest Table</h1>
+            <p class="lead">
+                If you would like to request a song, please sign in or register as a new user.
+            </p>
+
+            <!-- Button to trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#songRequestModal" onclick="checkAuthenticationBeforeModal()">
+                Request a Song
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="songRequestModal" tabindex="-1" aria-labelledby="songRequestModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="songRequestModalLabel">Request a Song</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                    <form id="songRequestForm">
+                        <div class="form-group">
+                        <label for="songTitle">Song Title</label>
+                        <input type="text" class="form-control" id="songTitle" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="artistName">Artist Name</label>
+                        <input type="text" class="form-control" id="artistName" required>
+                        </div>
+                        <!-- Add more form fields if needed -->
+                        <button type="submit" class="btn btn-primary" onclick="doAddSong(event)" >Submit</button>
+                    </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+
+            <div class="content">
+                    <table class="table">
+                        <thead>
+                            <th>
+                                User ID
+                            </th>
+                            <th>
+                                Song ID
+                            </th>
+                            <th>
+                                Artist
+                            </th>
+                            <th>
+                                Song Title
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                        </thead>
+                        <tbody id="all-songs">
+                            <tr id="loading-row">
+                                <td colspan="6">Loading...</td>
+                            </tr>
+                        </tbody>                       
+                    </table>
+            </div>
+        </div>
+        
+
+        <footer>
+        <h1 class="lead">
+            Author: 
+            <a href="https://github.com/JohnMKreski/finalApp">
+                John Michael Kreski
+            </a>
+        </h1>
+        </footer>
+    </main>
+
+    <div class="sidebar">
+        <ul class="sidebar-list">
+            <li id="homeItem" class="sidebar-item">
+                <a href="../../../index.html" class="sidebar-link">Home</a>
+            </li>
+            <li id="globalItem" class="sidebar-item">
+                <a href="./songs.html" class="sidebar-link">SongQuest</a>
+            </li>
+            <!-- <li class="sidebar-item">
+                <a href="./songrequest.html" class="sidebar-link">Request A Song</a>
+            </li> -->
+            <li id="userItem" class="sidebar-item">
+                <a href="../../../user.html" class="sidebar-link">User Info</a>
+            </li>
+            <li id="loginItem" class="sidebar-item">
+                <a id="loginLink" href="../../../login.html" class="sidebar-link">Login</a>
+            </li>
+            <li id="logoutItem" class="sidebar-item">
+                <a id="logoutLink" href="#" class="sidebar-link" onclick="doLogout(event)">Logout</a>
+            </li>
+        </ul> 
+    </div>
+
+    <script src="../API/api.config.js"></script>
+    <script src="../API/simple-storage.js"></script>
+    <script src="../API/service-helpers.js"></script>
+    <script src="../API/auth.service.js"></script>
+    <script src="../API/auth.js"></script>
+    <script src="../API/auth.guard.js"></script>
+    <script src="../API/song_req.auth.guard.js"></script>
+
+    <script src="./song_req-api.service.js"></script>
+    <script src="./song_req.service.js"></script>
+    <script src="./song_req.js"></script>
+
+    <script src="../UI/menu.js"></script>
+    <script src="../UI/sidebar.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../UI/bootstrap.js"></script>
+    <script src="../UI/modal.js"></script>
+
+    <script src="../../../app.js"></script>
+
+    
+    
+
+  </body>
+
+</html>
